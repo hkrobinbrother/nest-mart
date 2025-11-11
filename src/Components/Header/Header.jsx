@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
         <div className="flex gap-2 items-center ">
           <img src="https://i.ibb.co.com/TqFmfJrF/logo.png" alt="" />
           <div>
-            <h1 className="text-4xl text-green-400 font-bold">Nest</h1>
+            <NavLink to="/" className="text-4xl text-green-400 font-bold">Nest</NavLink>
             <p>MART & GROCERY</p>
           </div>
           <div className="flex gap-2 items-center ml-6">
@@ -24,7 +25,7 @@ const Header = () => {
           <a href="">Shop</a>
           <a href="">Mega Menu </a>
           <a href="">Vendors </a>
-          <a href="">Blog </a>
+          <NavLink to="/blog">Blog </NavLink>
           <a href="">Pages</a>
           <a href="">Contact</a>
         </div>
