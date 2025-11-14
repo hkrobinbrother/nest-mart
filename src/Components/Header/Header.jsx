@@ -8,7 +8,9 @@ const Header = () => {
         <div className="flex gap-2 items-center ">
           <img src="https://i.ibb.co.com/TqFmfJrF/logo.png" alt="" />
           <div>
-            <NavLink to="/" className="text-4xl text-green-400 font-bold">Nest</NavLink>
+            <NavLink to="/" className="text-4xl text-green-400 font-bold">
+              Nest
+            </NavLink>
             <p>MART & GROCERY</p>
           </div>
           <div className="flex gap-2 items-center ml-6">
@@ -21,13 +23,64 @@ const Header = () => {
           </div>
         </div>
         <div className="flex gap-6 font-bold">
-          <a href="">About</a>
-          <a href="">Shop</a>
-          <a href="">Mega Menu </a>
-          <a href="">Vendors </a>
-          <NavLink to="/blog">Blog </NavLink>
-          <a href="">Pages</a>
-          <a href="">Contact</a>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 text-xl font-extrabold"
+                : "text-gray-500 text-xl font-extrabold  "
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-green-400 text-xl font-extrabold"
+                : "text-gray-400 text-xl font-extrabold"
+            }
+          >
+            About
+          </NavLink>
+          <NavLink className={({ isActive }) =>
+              isActive
+                ? "text-green-400 text-xl font-extrabold"
+                : "text-gray-400 text-xl font-extrabold"
+            }>Shop</NavLink>
+          <NavLink className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 text-xl font-extrabold"
+                : "text-gray-500 text-xl font-extrabold  "
+            }
+            to="/megaMenu"
+            >Mega Menu </NavLink>
+          <NavLink className={({ isActive }) =>
+              isActive
+                ? "text-green-400 text-xl font-extrabold"
+                : "text-gray-500 text-xl font-extrabold  "
+            }
+            
+            >Vendors </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 text-xl font-extrabold"
+                : "text-gray-500 text-xl font-extrabold  "
+            }
+            to="/blog"
+          >
+            Blog{" "}
+          </NavLink>
+          <NavLink className={({ isActive }) =>
+              isActive
+                ? "text-green-400 text-xl font-extrabold"
+                : "text-gray-500 text-xl font-extrabold  "
+            }>Pages</NavLink>
+          <NavLink className={({ isActive }) =>
+              isActive
+                ? "text-green-400 text-xl font-extrabold"
+                : "text-gray-500 text-xl font-extrabold  "
+            }>Contact</NavLink>
         </div>
         <div>
           <button className="px-6 py-3 bg-green-500 text-white font-bold rounded-lg">

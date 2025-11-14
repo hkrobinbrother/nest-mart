@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router/dom";
 import MainLayout from './../Layout/MainLayout';
 import Home from '../Pages/Home';
 import Blog from '../Pages/Blog';
+import MegaMenu from '../Pages/MegaMenu';
 
 
 export const router = createBrowserRouter([
@@ -12,7 +13,9 @@ export const router = createBrowserRouter([
     element: <MainLayout></MainLayout> ,
     children:[
          { index: true, Component: Home },
-        {path:"/blog" , Component: Blog ,loader: ()=> fetch("/blog.json")}
+        {path:"/blog" , Component: Blog ,loader: ()=> fetch("/blog.json")},
+        {path:"/megaMenu",Component: MegaMenu, loader: ()=> fetch("/product.json")},
+
     ]
   },
 ]);
