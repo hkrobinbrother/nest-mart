@@ -1,7 +1,14 @@
-import React from "react";
-import { NavLink } from "react-router";
+import React, { useContext } from "react";
+import { Link, NavLink } from "react-router";
+
+
+import { UserContext } from "../../UserContext";
+
 
 const Header = () => {
+  const {user,logOut} = useContext(UserContext)
+  
+  
   return (
     <div className="container mx-auto ">
       <div className="flex justify-between items-center h-[80px]">
@@ -80,12 +87,14 @@ const Header = () => {
               isActive
                 ? "text-green-400 text-xl font-extrabold"
                 : "text-gray-500 text-xl font-extrabold  "
-            }>Contact</NavLink>
+            }
+            to="/contact"
+            >Contact</NavLink>
         </div>
         <div>
-          <button className="px-6 py-3 bg-green-500 text-white font-bold rounded-lg">
+          <Link to="/login" className="px-6 py-3 bg-green-500 text-white font-bold rounded-lg">
             Login
-          </button>
+          </Link>
         </div>
       </div>
     </div>
