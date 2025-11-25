@@ -21,7 +21,7 @@ const Login = () => {
       Swal.fire({
         title: "Successfully Login!",
         icon: "success",
-        time: 1500,
+        time: 1000,
         showConfirmButton: false,
       });
       navigate("")

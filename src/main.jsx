@@ -5,7 +5,8 @@ import App from "./App.jsx";
 import MainLayout from "./Layout/MainLayout.jsx";
 import { RouterProvider } from "react-router";
 import { router } from "./Router/Router.jsx";
-import UserProvider from "./UseContex.jsx";
+import UserProvider from "./UserContext.jsx";
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
